@@ -39,7 +39,6 @@ public class MockSensingContext extends RenamingDelegatingContext {
 		Object response = super.getSystemService(name);
 		if(name == SENSOR_SERVICE)	
 		{
-			//TODO: mock the SensorManager			
 			SensorManager spySensorManager = (SensorManager) spy(response);
 			
 			when(spySensorManager.registerListener(any(SensorEventListener.class), 
