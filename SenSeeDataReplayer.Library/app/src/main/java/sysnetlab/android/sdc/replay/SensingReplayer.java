@@ -4,8 +4,12 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 
+import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 //import org.powermock.reflect.Whitebox;
 
@@ -52,13 +56,15 @@ public class SensingReplayer {
 					se.values[1] = values[1];
 					se.values[2] = values[2];
                     */
-					
-					//se.values = values;
-					//when(se.values).thenReturn(values);
-					//when(se.accuracy).thenReturn(0);
-					//when(se.sensor).thenReturn(Sensor.TYPE_ACCELEROMETER);
+
+                    SensorEvent se = mock(SensorEvent.class);
+                    Sensor sensor = mock(Sensor.class);
+                    when(sensor.getType()).thenReturn(Sensor.TYPE_ACCELEROMETER);
+
+					when(se.values).thenReturn(values);
+					when(se.sensor).thenReturn(sensor);
 				
-					//listener.onSensorChanged(se);
+					listener.onSensorChanged(se);
 				}
 			}
 			br.close();
