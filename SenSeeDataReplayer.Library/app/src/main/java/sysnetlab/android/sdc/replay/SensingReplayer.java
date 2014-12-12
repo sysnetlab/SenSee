@@ -7,6 +7,8 @@ import java.io.InputStreamReader;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 
+import org.powermock.reflect.Whitebox;
+
 public class SensingReplayer {
 
 	private InputStreamReader isReader;
@@ -42,13 +44,13 @@ public class SensingReplayer {
 					//create a SensorEvent object
 					//TODO: complete accuracy and sensor, check timestamp
 					
-					/*
-					SensorEvent se = WhiteBox.invokeConstructor(SensorEvent.class, 3);
+
+					SensorEvent se = Whitebox.invokeConstructor(SensorEvent.class, 3);
 					se.timestamp = timestamp;
 					se.values[0] = values[0];
 					se.values[1] = values[1];
 					se.values[2] = values[2];
-					*/
+
 					
 					//se.values = values;
 					//when(se.values).thenReturn(values);

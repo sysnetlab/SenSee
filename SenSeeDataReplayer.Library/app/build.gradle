@@ -19,7 +19,9 @@ android {
 
 dependencies {
     compile 'com.android.support:support-v4:19.1.0'
-    compile files('libs/dexmaker-1.1.jar')
-    compile files('libs/dexmaker-mockito-1.1.jar')
-    compile files('libs/mockito-all-1.9.5.jar')
+    compile group:'org.powermock', name:'powermock-mockito-release-full', version:'1.4.9'
+
+    //compile files('libs/dexmaker-1.1.jar')
+    //compile files('libs/dexmaker-mockito-1.1.jar')
+    //compile files('libs/mockito-all-1.9.5.jar')
 }
