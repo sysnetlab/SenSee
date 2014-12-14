@@ -10,5 +10,6 @@ public interface SensingReplayer {
     public void replayOne();
     public void replayAll();
     public boolean replayCompleted();
+    public float[] getNextSensorValuesForReplay();
 
 }
