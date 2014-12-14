@@ -30,9 +30,7 @@ public class MockSensingContext extends RenamingDelegatingContext {
 	{
 		return capturedEventListener;
 	}
-	
-	
-	@SuppressWarnings("rawtypes")
+
 	@Override
 	public Object getSystemService(String name)
 	{			
