@@ -19,14 +19,15 @@ public class NoEffectMetamorphicTransform implements MetamorphicTransform {
        // }
 
 
-        //loop to get the each array of float values of the list
+        //loop to to multiply all values of Z by 2
 
         for(int i=0; i<inputData.size();i++) {
             float[] array = inputData.get(i);
 
-                for(int j =0;j<array.length;j++) {
-                     array[j] = array[j] *2;
-                 }
+            for (int j = 2;j<array.length;j+=3) {
+
+                array[j] = array[j]*2;
+            }
             inputData.set(i, array);
         }
         return inputData;
