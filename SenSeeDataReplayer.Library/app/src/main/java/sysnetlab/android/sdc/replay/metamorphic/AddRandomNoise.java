@@ -3,23 +3,21 @@ package sysnetlab.android.sdc.replay.metamorphic;
 import java.util.List;
 import java.util.Random;
 
-/**
- * Created by Marco on 2/12/2015.
- */
-public class AddNoise {
+public class AddRandomNoise {
 
     public List transform(List<float[]> inputData)
     {
         Random r=new Random();
+        //float NoiseValue = 0;
 
-        for(int i=0; i<inputData.size();i++)
+        for(int DataIndex=0; DataIndex<inputData.size();DataIndex++)
         {
-            float[] array = inputData.get(i);
+            float[] array = inputData.get(DataIndex);
             for(int j =0;j<array.length;j++)
             {
-                // array[j] = (float)((r.nextDouble(20.0)-10.0)/10.0);
+                array[j]+=Math.round(r.nextDouble()*100)/100.0;
             }
-            inputData.set(i, array);
+            inputData.set(DataIndex, array);
         }
         return inputData;
     }
