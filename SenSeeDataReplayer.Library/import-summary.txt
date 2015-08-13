@@ -7,20 +7,10 @@ The following files were *not* copied into the new Gradle project; you
 should evaluate whether these are still needed in your project and if
 so manually move them:
 
-* ic_launcher-web.png
-* proguard-project.txt
-
-Replaced Jars with Dependencies:
---------------------------------
-The importer recognized the following .jar files as third party
-libraries and replaced them with Gradle dependencies instead. This has
-the advantage that more explicit version information is known, and the
-libraries can be updated automatically. However, it is possible that
-the .jar file in your project was of an older version than the
-dependency we picked, which could render the project not compileable.
-You can disable the jar replacement in the import wizard and try again:
-
-android-support-v4.jar => com.android.support:support-v4:19.1.0
+* .gitignore
+* README.textile
+* default.properties
+* test_cases.txt
 
 Moved Files:
 ------------
@@ -28,13 +18,10 @@ Android Gradle projects use a different directory structure than ADT
 Eclipse projects. Here's how the projects were restructured:
 
 * AndroidManifest.xml => app\src\main\AndroidManifest.xml
-* assets\ => app\src\main\assets\
-* libs\dexmaker-1.1.jar => app\libs\dexmaker-1.1.jar
-* libs\dexmaker-mockito-1.1.jar => app\libs\dexmaker-mockito-1.1.jar
-* libs\mockito-all-1.9.5.jar => app\libs\mockito-all-1.9.5.jar
-* lint.xml => app\lint.xml
 * res\ => app\src\main\res\
 * src\ => app\src\main\java\
+* C:\Users\kosta\Dropbox\SenSeeTesting\ExampleApps\Pedometer.ReplayTest\res\ => app\src\androidTest\res\
+* C:\Users\kosta\Dropbox\SenSeeTesting\ExampleApps\Pedometer.ReplayTest\src\ => app\src\androidTest\java\
 
 Next Steps:
 -----------

@@ -1,11 +1,16 @@
-apply plugin: 'com.android.library'
+apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
+    compileSdkVersion 8
     buildToolsVersion "21.1.2"
 
     defaultConfig {
+        applicationId "name.bagi.levente.pedometer"
         minSdkVersion 8
+        targetSdkVersion 8
+
+        testApplicationId "sysnetlab.android.sdc.replay.test"
+        testInstrumentationRunner "android.test.InstrumentationTestRunner"
     }
 
     buildTypes {
@@ -17,14 +22,8 @@ android {
 }
 
 dependencies {
-/*
-    compile('org.mockito:mockito-core:1.10.8')
-    compile('org.powermock:powermock-api-mockito:1.6.0')
-            {
-                exclude group:'org.mockito'
-            }
-*/
-    compile('org.mockito:mockito-core:1.9.4')
-    compile('com.google.dexmaker:dexmaker:1.2')
-    compile('com.google.dexmaker:dexmaker-mockito:1.2')
+    androidTestCompile project(":sensee-data-replayer")
+
+    //compile 'com.android.support:appcompat-v7:21.0.+'
+    compile 'com.android.support:support-v4:21.0.+'
 }

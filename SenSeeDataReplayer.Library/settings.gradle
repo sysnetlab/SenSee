@@ -1,1 +1,4 @@
-include ':app'
+include ':app',':sensee-data-replayer'
+
+
+project(':sensee-data-replayer').projectDir = file("C:\\GitHub\\SenSee\\SenSeeDataReplayer.Library\\app")

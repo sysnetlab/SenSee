@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SenSeeDataReplayer.Library.iml" filepath="$PROJECT_DIR$/SenSeeDataReplayer.Library.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SensorDataReplayer.Library.iml" filepath="$PROJECT_DIR$/SensorDataReplayer.Library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-pedometer-studio.iml" filepath="$PROJECT_DIR$/android-pedometer-studio.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:/GitHub/SenSee/SenSeeDataReplayer.Library/app/sensee-data-replayer.iml" filepath="C:/GitHub/SenSee/SenSeeDataReplayer.Library/app/sensee-data-replayer.iml" />
     </modules>
   </component>
 </project>
