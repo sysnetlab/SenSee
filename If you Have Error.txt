@@ -1,0 +1,3 @@
+Cannot load module file 'C:\GitHub\SenSee\SenSeeDataReplayer.Library\app\sensee-data-replayer.iml':
+File C:\GitHub\SenSee\SenSeeDataReplayer.Library\app\sensee-data-replayer.iml does not exist
+Would you like to remove module 'sensee-data-replayer' from the project?
