@@ -73,17 +73,14 @@ public class StepServiceTest
         //InputStream dataStream = testContext.getAssets().open("50StepsPocket.csv");
         //InputStream dataStream = testContext.getAssets().open("Marcos10Steps.csv");
 
-        InputStream dataStream = testContext.getAssets().open("Marcos10Hip.csv");
+        //InputStream dataStream = testContext.getAssets().open("Marcos10Hip.csv");
         //InputStream dataStream = testContext.getAssets().open("Marcos50Hip.csv");
         //InputStream dataStream = testContext.getAssets().open("Marcos50ForArm.csv");
 
         //InputStream dataStream = testContext.getAssets().open("CeCe50StepsAncle.csv");
         //InputStream dataStream = testContext.getAssets().open("CeCe100StepsHip.csv");
         //InputStream dataStream = testContext.getAssets().open("Cece50StepsV2.csv");
-        //InputStream dataStream = testContext.getAssets().open("Marcos60StepsHip.csv");
-
-        //InputStream dataStream = testContext.getAssets().open("Cece50StepsHipS3.csv");
-
+        //InputStream dataStream = testContext.getAssets().open("Marcos10Steps.csv");
 
         int stepsInSenSeeExperiment = 50;
 
@@ -103,7 +100,7 @@ public class StepServiceTest
             }
         });
 
-        int TransformID = 10;
+        int TransformID = 1;
 
 
         //replay
@@ -158,7 +155,7 @@ public class StepServiceTest
         }
 
         if (TransformID == 7) {
-            // Transform that adds average noise of each axis to each data point in the axis family
+            // Transform that adds average noise to the data set
             AddAvgNoise2 transformSeven = new AddAvgNoise2();
             List<float[]> morphedSensorValues = transformSeven.transform(allSensorValues);
             replayInStepDetectorAndAssert(stepDetector, stepsInSenSeeExperiment, morphedSensorValues);
@@ -180,7 +177,7 @@ public class StepServiceTest
         }
 
         else{
-            // This Transform moves the base line of the input data based on defined Rise and
+            // This Transform move the base line of the input data based on defined Rise and
             // Run values
             BaseLineShift transformNine = new BaseLineShift();
             List<float[]> morphedSensorValues = transformNine.transform(allSensorValues);
