@@ -60,6 +60,8 @@ public class AndroidSensorEventListener implements SensorEventListener {
         } else {
             mChannel.write(",0");
         }
+        //write a timestamp of the sensor event here added by Sagar Pandit on March24, 2017
+        mChannel.write("," + event.timestamp);
         mChannel.write("\n");
     }
 
